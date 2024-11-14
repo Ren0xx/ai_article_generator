@@ -1,18 +1,23 @@
 import { config } from "dotenv";
 config();
 
+import { prompt, messageForSystem } from "./helpers.js";
+
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY });
 
+
 const completion = await openai.chat.completions.create({
-	model: "gpt-3.5-turbo",
+    model: "gpt-3.5-turbo",
 	messages: [
-		{ role: "system", content: "You are a html generator." },
+        { role: "system", content: messageForSystem },
 		{
-			role: "user",
-			content: "Write me a test html code",
+            role: "user",
+			content: prompt,
 		},
 	],
 });
 
-console.log(completion.choices[0].message);
+console.log(prompt);
+// console.log(completion.choices[0].message);
+
