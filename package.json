@@ -1,17 +1,16 @@
 {
 	"name": "ai_article_generator",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "script.js",
 	"type": "module",
 	"scripts": {
-		"dev": "node script.js"
+		"dev": "node --env-file=.env script.js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
-		"dotenv": "^16.4.5",
 		"openai": "^4.72.0"
 	}
 }

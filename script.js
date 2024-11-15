@@ -1,23 +1,23 @@
-import { config } from "dotenv";
-config();
+// import { config } from "dotenv";
+// config();
 
-import { prompt, messageForSystem } from "./helpers.js";
+import { promptWithFileContent, messageForSystem } from "./helpers.js";
 
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY });
 
-
 const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+	model: "gpt-4o",
 	messages: [
-        { role: "system", content: messageForSystem },
+		{ role: "system", content: messageForSystem },
 		{
-            role: "user",
-			content: prompt,
+			role: "user",
+			content: promptWithFileContent,
 		},
 	],
 });
 
-console.log(prompt);
-// console.log(completion.choices[0].message);
+const generatedArticleInHtml = completion.choices[0].message.content;
 
+// Generated article can be printed out
+// console.log(generatedArticleInHtml) 

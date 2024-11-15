@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    font-family: "Roboto";
+    letter-spacing: .025em;
+}
+
+.container>figure {
+    font-style: italic;
+}
+
+.container>p {
+    font-weight: 300;
+    font-size: large;
+}
+
+.container>h2 {
+    /* font-size: x-large; */
+    font-weight: 400;
+}
+
+.container>h1 {
+    font-weight: 700;
+}

@@ -17,7 +17,7 @@ Other requirements: Do not add CSS or Javascript. The generated code should only
 Do not include <html>, <head>, or <body> tags.
 This is the content on which you should rely on:`;
 
-const prompt = `${promptContent} ${fileContent}`;
+const promptWithFileContent = `${promptContent} ${fileContent}`;
 
-export { prompt, messageForSystem };
+export { promptWithFileContent, messageForSystem };
 
