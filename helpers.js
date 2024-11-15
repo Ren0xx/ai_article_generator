@@ -6,6 +6,15 @@ function readFile() {
 	const fileContent = fs.readFileSync(filePath, "utf8");
 	return fileContent;
 }
+
+function writeToFile(content, fileName) {
+	fs.writeFile(fileName, content, (err) => {
+		if (err) console.error(err);
+		else {
+			console.log("File read successfully!");
+		}
+	});
+}
 const fileContent = readFile();
 
 const promptContent = ` Please generate HTML content with well-structured text and appropriate topic sections. 
@@ -19,5 +28,5 @@ This is the content on which you should rely on:`;
 
 const promptWithFileContent = `${promptContent} ${fileContent}`;
 
-export { promptWithFileContent, messageForSystem };
+export { promptWithFileContent, messageForSystem, writeToFile };
 

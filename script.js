@@ -1,7 +1,8 @@
-// import { config } from "dotenv";
-// config();
-
-import { promptWithFileContent, messageForSystem } from "./helpers.js";
+import {
+	promptWithFileContent,
+	messageForSystem,
+	writeToFile,
+} from "./helpers.js";
 
 import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY });
@@ -19,5 +20,9 @@ const completion = await openai.chat.completions.create({
 
 const generatedArticleInHtml = completion.choices[0].message.content;
 
-// Generated article can be printed out
-// console.log(generatedArticleInHtml) 
+//Writing generated content to file:
+writeToFile(generatedArticleInHtml, "test_artykul.html");
+
+// Generated article can also be printed out
+// console.log(generatedArticleInHtml)
+
