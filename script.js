@@ -23,6 +23,8 @@ const generatedArticleInHtml = completion.choices[0].message.content;
 //Writing generated content to file:
 writeToFile(generatedArticleInHtml, "test_artykul.html");
 
+console.log("Operation was successful");
+
 // Generated article can also be printed out
 // console.log(generatedArticleInHtml)
 

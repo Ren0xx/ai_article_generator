@@ -8,6 +8,10 @@ function readFile() {
 }
 
 function writeToFile(content, fileName) {
+	if (fs.existsSync(fileName)) {
+		console.error("File already exits, change the name of the file");
+		return;
+	}
 	fs.writeFile(fileName, content, (err) => {
 		if (err) console.error(err);
 		else {
