@@ -14,7 +14,7 @@ Wygenerowany artykuł jest także zapisany w zmiennej, która jest przekazywana 
 
 ## Uruchomienie
 
-Aby aplikacja połączyła się z API OPEN_AI się poprawnie, w folderze aplikacji powinien znaleźć się plik `.env`, ze zmienną `OPEN_AI_API_KEY` -> patrz plik `.env.example`. (Można przekazać ją także "ręcznie" wpisując w pliku `script.js` -> <br/>
+Aby aplikacja połączyła się z API OPEN_AI poprawnie, w folderze aplikacji powinien znaleźć się plik `.env`, ze zmienną `OPEN_AI_API_KEY` -> patrz plik `.env.example`. (Można przekazać ją także "ręcznie" wpisując w pliku `script.js` -> <br/>
 
 `const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY })`, w miejscu `process.env.OPEN_AI_API_KEY`)
 
